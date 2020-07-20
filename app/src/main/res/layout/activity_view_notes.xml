@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/pink">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            android:id="@+id/back_arrow"
+            android:paddingLeft="10dp"
+            android:clickable="true"
+            android:onClick="finish"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VIEW NOTE"
+            android:textSize="20sp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/back_arrow"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"/>
+
+        <Button
+            android:id="@+id/addImage"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/ic_baseline_photo_camera_24"
+            android:onClick="add_image" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/note_name"
+                android:textStyle="bold"
+                android:textColor="@color/pink"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Name"
+                android:id="@+id/title_id"
+                android:inputType="text"
+                android:editable="false"
+                android:imeOptions="actionNext"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notes Detail"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter text"
+                android:minHeight="150dp"
+                android:gravity="start"
+                android:inputType="textMultiLine"
+                android:editable="false"
+                android:lines="5"
+                android:imeOptions="actionDone"
+                android:id="@+id/text_id"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/date"
+                    android:text="Date:"
+                    android:textStyle="bold"
+                    android:paddingTop="5dp"/>
+
+                <LinearLayout
+                    android:layout_below="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textAlignment="textStart"
+                        android:gravity="start"
+                        android:layout_weight=".5"
+                        android:id="@+id/location0"
+                        android:textStyle="bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:text="Location:" />
+
+                    <TextView
+                        android:layout_weight=".5"
+                        android:id="@+id/location"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:text="Location"/>
+
+                </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Audio"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"/>
+
+
+            <ImageView
+                android:id="@+id/play_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/pink"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/baseline_volume_up_white_18" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:id="@+id/viewImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</LinearLayout>

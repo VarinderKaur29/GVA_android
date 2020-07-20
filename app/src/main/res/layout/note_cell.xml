@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/newgreyColor"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:id="@+id/note_layout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note Name"
+        android:textColor="@color/pink"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note"
+        android:id="@+id/title"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorBlack"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Note Description"
+        android:textColor="@color/pink" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note"
+        android:id="@+id/text"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorBlack"
+        android:maxLines="2"
+        android:ellipsize="end"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note added Time "
+        android:layout_marginTop="10dp"
+        android:textColor="@color/pink"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:id="@+id/date"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorBlack"
+        android:maxLines="2"
+        android:ellipsize="end"
+        />
+
+</LinearLayout>
